@@ -13,11 +13,12 @@ gulp.task('styles', () => {
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
     .pipe($.sass.sync({
+      compass: true,
       outputStyle: 'expanded',
       precision: 10,
       includePaths: ['.']
     }).on('error', $.sass.logError))
-    .pipe($.autoprefixer({browsers: ['last 1 version']}))
+    .pipe($.autoprefixer({browsers: ['last 3 versions'], cascade: true, remove: true}))
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest('.tmp/styles'))
     .pipe(reload({stream: true}));
@@ -119,6 +120,7 @@ gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
 gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
   browserSync({
+    open: false,
     notify: false,
     port: 9000,
     server: {
