@@ -6,7 +6,8 @@
 
 ```
 git clone git@github.com:shuliu/my-yo-template.git newFolderName
-npm install --save-dev gulp-coffee gulp-coffeelint
-bower install jquery bootstrap —save
+npm install
+rename and update bower.json.sample to bower.json
+bower install
 ```
 
