@@ -1,0 +1,27 @@
+{
+  "name": "PROJECT_NAME",
+  "main": "index.js",
+  "version": "0.0.0",
+  "authors": [
+    "USER_NAME <USER_EMAIL>"
+  ],
+  "description": "my description",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "gsap": "~1.18.0",
+    "bootstrap": "~3.3.6",
+    "susy": "~2.2.7",
+    "compass-breakpoint": "~2.6.1",
+    "components-font-awesome": "~4.5.0"
+  },
+  "devDependencies": {
+    "coffee-script": "~1.10.0"
+  }
+}
