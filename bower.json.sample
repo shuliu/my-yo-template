@@ -5,7 +5,7 @@
   "authors": [
     "USER_NAME <USER_EMAIL>"
   ],
-  "description": "my description",
+  "description":"my description",
   "license": "MIT",
   "ignore": [
     "**/.*",
@@ -14,6 +14,15 @@
     "test",
     "tests"
   ],
+  "overrides": {
+    "bootstrap-sass": {
+      "main": [
+        "assets/stylesheets/_bootstrap.scss",
+        "assets/fonts/bootstrap/*",
+        "assets/javascripts/bootstrap.js"
+      ]
+    }
+  },
   "dependencies": {
     "gsap": "~1.18.0",
     "bootstrap": "~3.3.6",
@@ -22,6 +31,8 @@
     "components-font-awesome": "~4.5.0"
   },
   "devDependencies": {
+    "chai": "~3.4.2",
+    "mocha": "~2.3.4",
     "coffee-script": "~1.10.0"
   }
 }
