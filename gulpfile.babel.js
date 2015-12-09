@@ -18,8 +18,8 @@ gulp.task('styles', () => {
       precision: 10,
       includePaths: ['.']
     }).on('error', $.sass.logError))
-    .pipe($.autoprefixer({browsers: ['last 3 versions'], cascade: true, remove: true}))
-    .pipe($.sourcemaps.write())
+    .pipe($.autoprefixer({browsers: ['> 5%'], cascade: true, remove: true}))//'last 3 versions',
+    .pipe($.sourcemaps.write('../maps'))
     .pipe(gulp.dest('.tmp/styles'))
     .pipe(reload({stream: true}));
 });
