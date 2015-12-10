@@ -13,10 +13,9 @@ gulp.task('styles', () => {
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
     .pipe($.sass.sync({
-      compass: true,
       outputStyle: 'expanded',
       precision: 10,
-      includePaths: ['.']
+      includePaths: ['.', './node_modules/compass-mixins/lib']
     }).on('error', $.sass.logError))
     .pipe($.autoprefixer({browsers: ['> 5%'], cascade: true, remove: true}))//'last 3 versions',
     .pipe($.sourcemaps.write('../maps'))
